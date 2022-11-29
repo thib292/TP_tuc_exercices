@@ -23,6 +23,7 @@ jobs:
       - name: Install Pylint
         run : |
           pip install pylint
+          pip install pylint-exit
       - name: Analysing the code with pylint
         run: |
           python -m pylint —exit-zero

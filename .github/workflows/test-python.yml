@@ -23,9 +23,9 @@ jobs:
       - name: Install Pylint
         run : |
           pip install pylint
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py')
-    - name: Lunch Pytest
-      run : |
-        python -m pytest
+      - name: Analysing the code with pylint
+        run: |
+          python -m pylint
+      - name: Lunch Pytest
+        run : |
+          python -m pytest
